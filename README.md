@@ -13,7 +13,7 @@ From the [NZART Amateur Radio Examination Files download page](https://www.nzart
 
 Use the [exam_file_tools/json_get_answers.py](exam_file_tools/json_get_answers.py) script to generate a list of answers which is to be included in [s/exam.js](s/exam.js) for real-time grading use.
 
-The [exam_file_tools/json_to_flat_text.py] script can be used to generate an [Anki](https://apps.ankiweb.net/) deck. The output will need manual adjustment as there's a duplicate question.
+The [exam_file_tools/json_to_flat_text.py](exam_file_tools/json_to_flat_text.py) script can be used to generate an [Anki](https://apps.ankiweb.net/) deck. The output will need manual adjustment as there's a duplicate question.
 
 ## Copyright/License
 Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com> and is released under the [ISC license](https://www.isc.org/downloads/software-support-policy/isc-license/). Please see the included [LICENSE.txt](LICENSE.txt) for the full text.
