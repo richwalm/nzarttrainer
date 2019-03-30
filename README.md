@@ -2,9 +2,9 @@
 A web application simulating an NZART Exam for use in obtaining an New Zealand Amateur Radio License.
 Not affiliated with [New Zealand Association of Radio Transmitters](https://www.nzart.org.nz/) in any way.
 
-**The live website can be found at; [https://walmsley.gen.nz/nzarttrainer/](https://walmsley.gen.nz/nzarttrainer/).**
+**The live website can be found at; [https://walmsley.gen.nz/nzarttrainer/](https://walmsley.gen.nz/nzarttrainer/)**
 
-Written in [Flask](http://flask.pocoo.org/) for [Python 3](https://www.python.org/)
+Written in [Flask](http://flask.pocoo.org/) for [Python 3](https://www.python.org/).
 
 ## Updating the Exam Files
 Under the [exam_file_tools](exam_file_tools) directory, there's a number of Python scripts used to update the questions in the event of new versions.
