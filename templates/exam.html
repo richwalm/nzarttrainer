@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{%- block Title %} - Exam{% endblock %}
+
+{%- block Head %}
+<noscript><style>.jsonly{display:none}</style></noscript>
+<script src="{{ url_for('static', filename='exam.js') }}" type="text/javascript"></script>
+{%- endblock %}
+
+{% block Content -%}
+<h2>Exam</h2>
+
+<p>{% if 'tl' in request.args %}You have two hours to complete this exam which is displayed in the bottom right.<br>{% endif %}
+{%- if not 'aq' in request.args %}You will require {{ Needed }} of {{ Total }} correct answers in order to pass.<br>{% endif -%}
+<span class="jsonly">The numbers in the bottom right is the number of questions {% if 'rt' in request.args %}correct, {% endif %}answered, and the total.</span></p>
+
+<form method="post">
+
+{%- set NS = {'Offset': 0} -%}
+
+{#- Blocks -#}
+
+{%- for Block in Blocks %}
+{% set BlockIndex = loop.index0 %}
+<h3>{{ Data[BlockIndex]['Title'] }} &ndash; {{ Block|length }}</h3>
+
+{#- Questions -#}
+
+{%- for Index in Block %}
+{% set Question = Data[BlockIndex]['Questions'][Index] %}
+<fieldset>
+{%- if 'Image' in Question %}
+<img src="{{ url_for('static', filename=Question['Image']) }}" alt="Figure">
+{%- endif -%}
+<h4>{{ Question['Question'] }}</h4>
+
+{#- Choices #}
+<ul>
+{% for Choice in Question['Choices'] -%}
+<li><label><input type="radio" name="{{ NS.Offset + Index }}" value="{{ loop.index0 }}">{{ Choice }}</label></li>
+{% endfor -%}
+</ul>
+</fieldset>
+{%- endfor -%}
+
+{%- set _dummy = NS.update({'Offset': NS.Offset + Data[BlockIndex]['Questions']|length}) -%}
+
+{%- endfor %}
+
+{% if Seed %}<input type="hidden" name="s" value="{{ Seed }}">{% else %}<input type="hidden" name="aq" value="1">{% endif %}
+<input type="submit" value="Submit">
+
+</form>
+{%- endblock %}

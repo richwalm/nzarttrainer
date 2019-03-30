@@ -1,0 +1,98 @@
+html {
+	position: relative;
+}
+body {
+	margin: 1em;
+	font: medium Tahoma, Arial, sans-serif;
+	text-align: center;
+	background: url("bg.jpg") center 100% no-repeat fixed;
+	background-size: cover;
+}
+:link {
+	color: #118;
+}
+:visited {
+	color: #428;
+}
+a:active {
+	color: #824;
+}
+h1, h2, h3, h4 {
+	font-family: Georgia, serif;
+	font-weight: bold;
+	margin: .5em 0;
+}
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+h3, h4 {
+	text-align: left;
+}
+h1, h2, h3, p {
+	text-shadow: 1px 1px 0 white;
+}
+fieldset {
+	border: 1px solid #999;
+	border-radius: 1em;
+	margin-bottom: 1em;
+	text-align: left;
+	background: rgba(255, 255, 255, .65);
+	box-shadow: .3em .3em 10px #888;
+}
+fieldset img {
+	max-width: 100%;
+}
+.c {
+	border: 1px solid #2fb03e;
+	background: rgba(0, 255, 0, .45);
+}
+.w {
+	border: 1px solid #bc5b5b;
+	background: rgba(255, 0, 0, .45);
+}
+ul {
+	padding-left: 1.5em;
+	list-style-type: none;
+}
+#status {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, .65);
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	padding: .5em;
+	border-top-left-radius: .5em;
+	box-shadow: .3em .3em 10px #888;
+}
+#status p {
+	margin: 0;
+	font-size: large;
+	text-shadow: none;
+}
+label {
+	display: block;
+	width: 100%;
+}
+form label {
+	cursor: pointer;
+	border-radius: .25em;
+}
+form label:hover {
+	background: rgba(0, 0, 0, .2);
+}
+@media not all and (pointer:fine) {
+	form label:hover {
+		background: none;
+	}
+}
+footer {
+	position: absolute;
+	bottom: .25em;
+	left: .25em;
+	font-size: x-small;
+	opacity: .5;
+}
+footer :link,footer :visited, footer :active {
+	color: #000;
+}

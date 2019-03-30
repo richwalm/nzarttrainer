@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{%- block Head %}
+<script>
+// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt CC0
+// @license-end
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css">
+{%- endblock %}
+
+{% block Content %}
+
+<p>Welcome. This is a trainer for the NZART Exam which is required to gain a New Zealand Amateur Radio Licence.<br>
+The questions in this exam are from version NZARTX17f which was issued on April 2018.</p>
+
+<noscript><p><b style="color: red">It appears that you do not have JavaScript enabled. For usability, it's highly recommended.</b></p></noscript>
+
+<p>Please be aware that this trainer is not affiliated with <b><a href="https://www.nzart.org.nz">New Zealand Association of Radio Transmitters</a></b>.<br>
+Once you're able to complete this exam reliably, please see their website to sit the real exam.</p>
+
+<p>If you have any feedback or questions regarding this trainer, please 
+<span id="oem"><script type="text/javascript">document.getElementById('oem').innerHTML='<n uers="znvygb:evpujnyz+amneg@tznvy.pbz">pbagnpg zr</n>'.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script><noscript><span style="unicode-bidi:bidi-override;direction:rtl;">moc.l<!-- x -->iamg&#64;trazn+m<!-- x -->lawhcir ;em tcatnoc</span></noscript></span>.</p>
+
+<p>I have also converted this exam into an <a href="https://apps.ankiweb.net/">Anki</a> deck, a flash card learning program, which can be <a href="{{ url_for('static', filename='NZARTExamTrainer.apkg') }}">obtained here</a>.</p>
+
+<form action="{{ url_for('Exam') }}">
+
+<fieldset>
+
+<h4>Settings</h4>
+
+<ul>
+<li><label><input type="checkbox" id="rt" name="rt" value="1" disabled> Real-time grading.<noscript> <sup style="color: red">(Requires JavaScript.)</sup></noscript></label></li>
+<li><label><input type="checkbox" id="tl" name="tl" value="1" disabled> Two hour time limit. Used in the real exam.<noscript> <sup style="color: red">(Requires JavaScript.)</sup></noscript></label></li>
+<script>document.getElementById('rt').disabled=false;document.getElementById('tl').disabled=false;</script>
+<li><label><input type="text" style="width: 5em" id="s" name="s" placeholder="Random" maxlength="{{ MaxSeedSize }}"> Generator seed.</label></li>
+<li><label><input type="checkbox" name="aq" value="1" onchange="document.getElementById('s').disabled = this.checked"> All {{ Total }} questions.</label></li>
+</ul>
+
+</fieldset>
+
+<input type="submit" value="Start">
+
+</form>
+
+<a class="github-fork-ribbon" href="https://github.com/richwalm/nzarttrainer" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+
+{%- endblock %}

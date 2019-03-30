@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%- block Title %} - Results{% endblock %}
+
+{%- block Content -%}
+<h2>Results</h2>
+
+<p>{% if not 'aq' in request.args %}{% if Correct >= Needed %}<b>Congratulations</b>, you've {% if Correct == Needed %}just {% endif %}passed the exam, getting a total of {{ Correct }} correct answers of the required {{ Needed }}<br>If you feel you can pass this test reliably, contact <a href="https://www.nzart.org.nz/">NZART</a> to sit the real thing.{% else %}Sorry, but you've failed. Only getting {{ Correct }} correct answer{% if Correct > 1 %}s{% endif %} of the required {{ Needed }}. Don't fret. Just keep practicing.{% endif %}{% else %}You got {{ Correct }} question{% if Correct > 1 %}s{% endif %} correct out of the {{ Total }}.{% endif %}<br>
+Below are your full results.</p>
+{% set NS = {'Offset': 0} -%}
+
+{#- Blocks -#}
+
+{%- for Block in Blocks %}
+{% set BlockIndex = loop.index0 -%}
+<h3>{{ Data[BlockIndex]['Title'] }} &ndash; {{ BlockAnswers[BlockIndex] }} of {{ Block|length }}</h3>
+{# Questions -#}
+
+{%- for Index in Block -%}
+{% set Question = Data[BlockIndex]['Questions'][Index] -%}
+{% set I = NS.Offset + Index -%}
+{% set A = request.form.get(I|string) %}
+<fieldset{% if A and A|int == Answers[I] %} class="c"{% elif A %} class="w"{% endif %}>
+{%- if 'Image' in Question %}
+<img src="{{ url_for('static', filename=Question['Image']) }}" alt="Figure">
+{%- endif -%}
+<h4>{{ Question['Question'] }}</h4>
+
+{#- Choices #}
+<ul>
+{% for Choice in Question['Choices'] -%}
+<li><label><input type="radio" disabled{% if A and A|int == loop.index0 %} checked{% endif %}>{% if loop.index0 == Answers[I] %}<b>{{ Choice }}</b>{% elif A and A|int == loop.index0 %}<strike>{{ Choice }}</strike>{% else %}{{ Choice }}{% endif %}</label></li>
+{% endfor -%}
+</ul>
+</fieldset>
+{% endfor -%}
+
+{%- set _dummy = NS.update({'Offset': NS.Offset + Data[BlockIndex]['Questions']|length}) -%}
+
+{%- endfor %}
+<form action="{{ url_for('Index') }}"><input type="submit" value="Return to Front"></form>
+{%- endblock %}

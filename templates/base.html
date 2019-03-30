@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en-NZ">
+<head>
+<title>NZART Exam Trainer{% block Title %}{% endblock %}</title>
+<link href="{{ url_for('static', filename='s.css') }}" rel="stylesheet" type="text/css">
+{%- block Head %}{% endblock %}
+</head>
+<body>
+
+<a href="{{ url_for('Index') }}"><h1>NZART Exam Trainer</h1></a>
+
+{%- block Content %}{% endblock %}
+
+<footer><a href="https://flic.kr/p/ibcYNB">Background Image &copy; Greg "gvgoebel" Goebel 2012 CC BY-SA 2.0</a></footer>
+
+</body>
+</html>
