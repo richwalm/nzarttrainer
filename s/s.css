@@ -1,5 +1,6 @@
 html {
 	position: relative;
+	min-height: 100%;
 }
 body {
 	margin: 1em;
