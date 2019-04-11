@@ -3,9 +3,9 @@
 {%- block Head %}
 <script>
 /*    
-@licstart  The following is the entire license notice for the JavaScript code in this page.
+@licstart The following is the entire license notice for the JavaScript code in this page.
 This is free and unencumbered software released into the public domain.
-@licend  The above is the entire license notice for the JavaScript code in this page.
+@licend The above is the entire license notice for the JavaScript code in this page.
 */
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css">
@@ -35,9 +35,9 @@ Once you're able to complete this exam reliably, please see their website to sit
 <ul>
 <li><label><input type="checkbox" id="rt" name="rt" value="1" disabled> Real-time grading.<noscript> <sup style="color: red">(Requires JavaScript.)</sup></noscript></label></li>
 <li><label><input type="checkbox" id="tl" name="tl" value="1" disabled> Two hour time limit. Used in the real exam.<noscript> <sup style="color: red">(Requires JavaScript.)</sup></noscript></label></li>
-<script>document.getElementById('rt').disabled=false;document.getElementById('tl').disabled=false;</script>
+<script>var RT=document.getElementById('rt');RT.disabled=false;RT.checked=true;document.getElementById('tl').disabled=false;</script>
 <li><label><input type="text" style="width: 5em" id="s" name="s" placeholder="Random" maxlength="{{ MaxSeedSize }}"> Generator seed.</label></li>
-<li><label><input type="checkbox" name="aq" value="1" onchange="document.getElementById('s').disabled = this.checked"> All {{ Total }} questions.</label></li>
+<li><label><input type="checkbox" name="aq" value="1" onchange="document.getElementById('s').disabled=this.checked"> All {{ Total }} questions.</label></li>
 </ul>
 
 </fieldset>
