@@ -87,6 +87,11 @@ form label:hover {
 		background: none;
 	}
 }
+input[type=submit] {
+	font-size: medium;
+	box-shadow: .3em .3em 10px #888;
+	font-weight: bold;
+}
 footer {
 	position: absolute;
 	bottom: .25em;
