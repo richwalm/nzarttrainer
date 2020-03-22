@@ -295,13 +295,13 @@
             },
             {
                 "Choices": [
-                    "turn on your speech processor",
-                    "reduce your SWR",
-                    "not make any changes, otherwise you may lose contact",
-                    "reduce your transmitter power output to the minimum needed to maintain contact"
+                    "CEPT agreement",
+                    "IARP agreement",
+                    "ITU reciprocal license",
+                    "All of these choices are correct"
                 ],
-                "Answer": 3,
-                "Question": "If you contact another station and your signal is strong and perfectly readable, you should:"
+                "Answer": 0,
+                "Question": "Which of the following operating arrangements allows a NZ citizen holding a General Amateur Operator\u2019s Certificate of Competency and a call-sign to operate in many European countries:"
             },
             {
                 "Choices": [
