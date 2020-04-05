@@ -2,7 +2,8 @@
 A web application simulating an NZART Exam for use in obtaining an New Zealand Amateur Radio License.
 Not affiliated with [New Zealand Association of Radio Transmitters](https://www.nzart.org.nz/) in any way.
 
-**The live website can be found at; [https://walmsley.gen.nz/nzarttrainer/](https://walmsley.gen.nz/nzarttrainer/)**
+**A live website can be found at; [https://nzhamtrainer.m1m0n.net](https://nzhamtrainer.m1m0n.net)**
+Thanks to Sasha Japaridze (ZL1JX) for providing hosting.
 
 Written in [Flask](http://flask.pocoo.org/) for [Python 3](https://www.python.org/).
 
