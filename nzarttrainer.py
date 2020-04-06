@@ -18,9 +18,8 @@ MaxSeedSize = 32
 
 # Load the database and ensure it's valid.
 # Also create a cache for the answers.
-InputFile = open('questions.json')
-Data = json.load(InputFile)
-InputFile.close()
+with app.open_resource('questions.json') as InputFile:
+    Data = json.load(InputFile)
 
 Answers = []
 Required = Total = 0
