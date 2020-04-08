@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # NZART Exam Trainer
-# Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com>
+# Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com> (ZL1RSW)
 
 from flask import Flask, request, render_template, redirect, url_for, Response, abort
 

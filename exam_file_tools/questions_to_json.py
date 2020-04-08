@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # NZART Examination Questions to JSON Convertor
-# Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com>
+# Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com> (ZL1RSW)
 
 import sys
 import json

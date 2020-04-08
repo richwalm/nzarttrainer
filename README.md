@@ -17,7 +17,7 @@ Use the [exam_file_tools/json_get_answers.py](exam_file_tools/json_get_answers.p
 The [exam_file_tools/json_to_flat_text.py](exam_file_tools/json_to_flat_text.py) script can be used to generate an [Anki](https://apps.ankiweb.net/) deck. The output will need manual adjustment as there's a duplicate question.
 
 ## Copyright/License
-Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com> and is released under the [ISC license](https://www.isc.org/downloads/software-support-policy/isc-license/). Please see the included [LICENSE.txt](LICENSE.txt) for the full text.
+Written by Richard Walmsley <richwalm+nzarttrainer@gmail.com> (ZL1RSW) and is released under the [ISC license](https://www.isc.org/downloads/software-support-policy/isc-license/). Please see the included [LICENSE.txt](LICENSE.txt) for the full text.
 
 The NZART Exam Questions Bank, used in [questions.json](questions.json), and its respective diagrams are released into the public domain.
 
