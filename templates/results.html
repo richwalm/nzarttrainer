@@ -29,7 +29,7 @@ Below are your full results.</p>
 {#- Choices #}
 <ul>
 {% for Choice in Question['Choices'] -%}
-<li><label><input type="radio" disabled{% if A and A|int == loop.index0 %} checked{% endif %}>{% if loop.index0 == Answers[I] %}<b>{{ Choice }}</b>{% elif A and A|int == loop.index0 %}<strike>{{ Choice }}</strike>{% else %}{{ Choice }}{% endif %}</label></li>
+<li><label><input type="radio" disabled{% if A and A|int == loop.index0 %} checked{% endif %}>{% if loop.index0 == Answers[I] %}<b>{{ Choice }}</b>{% elif A and A|int == loop.index0 %}<s>{{ Choice }}</s>{% else %}{{ Choice }}{% endif %}</label></li>
 {% endfor -%}
 </ul>
 </fieldset>
