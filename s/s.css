@@ -33,7 +33,7 @@ h1 {
 h3, h4 {
 	text-align: left;
 }
-@media not screen {
+@media print {
 	h3 {
 		page-break-after: avoid;
 	}
@@ -52,7 +52,7 @@ fieldset {
 fieldset img {
 	max-width: 100%;
 }
-@media not screen {
+@media print {
 	fieldset {
 		page-break-inside: avoid;
 		box-shadow: none;
@@ -86,7 +86,7 @@ ul {
 	font-size: large;
 	text-shadow: none;
 }
-@media not screen {
+@media print {
 	#status {
 		display: none;
 	}
@@ -112,7 +112,7 @@ input[type=submit] {
 	box-shadow: .3em .3em 10px #888;
 	font-weight: bold;
 }
-@media not screen {
+@media print {
 	input[type=submit] {
 		display: none;
 	}
@@ -132,7 +132,7 @@ footer :link,footer :visited, footer :active {
 		left: .25em;
 	}
 }
-@media not screen {
+@media print {
 	footer a, .jsonly {
 		display: none;
 	}
