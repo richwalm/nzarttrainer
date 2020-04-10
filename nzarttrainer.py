@@ -14,7 +14,7 @@ app = Flask(__name__, static_folder = 's')
 
 # Constants.
 Needed = 40
-MaxSeedSize = 32
+MaxSeedSize = 8
 
 # Load the database and ensure it's valid.
 # Also create a cache for the answers.

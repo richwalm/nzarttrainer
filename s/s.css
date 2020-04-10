@@ -98,6 +98,7 @@ footer {
 	left: .25em;
 	font-size: x-small;
 	opacity: .5;
+	text-align: left;
 }
 footer :link,footer :visited, footer :active {
 	color: #000;

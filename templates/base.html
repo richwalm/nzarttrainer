@@ -13,7 +13,8 @@
 
 {%- block Content %}{% endblock %}
 
-<footer><a href="https://flic.kr/p/ibcYNB">Background Image &copy; Greg "gvgoebel" Goebel 2012 CC BY-SA 2.0</a></footer>
+<footer>{% if Seed %}Generator Seed; <kbd>{{ Seed }}</kbd><br>
+{% endif %}<a href="https://flic.kr/p/ibcYNB">Background Image &copy; Greg "gvgoebel" Goebel 2012 CC BY-SA 2.0</a></footer>
 
 </body>
 </html>
