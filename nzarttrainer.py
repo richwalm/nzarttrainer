@@ -60,6 +60,7 @@ def GenerateExam(Seed):
 
             Indexes.append(R)
 
+        Indexes.sort()
         Blocks.append(Indexes)
 
     return Blocks
