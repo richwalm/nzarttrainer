@@ -23,5 +23,5 @@ The NZART Exam Questions Bank, used in [questions.json](questions.json), and its
 
 The [background image](s/bg.jpg) is copyright [Greg "gvgoebel" Goebel 2012 CC BY-SA 2.0](https://flic.kr/p/ibcYNB).
 
-The [GitHub Corner](https://github.com/tholman/github-corners) is produced by Tim Holman, released under the [https://github.com/tholman/github-corners/blob/master/license.md](MIT License).
+The [GitHub Corner](https://github.com/tholman/github-corners) is produced by Tim Holman, released under the [MIT License](https://github.com/tholman/github-corners/blob/master/license.md).
 
