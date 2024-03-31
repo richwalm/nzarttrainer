@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nzarttrainer:
+    build: .
+    environment:
+     - MODULE_NAME=nzarttrainer
+    ports:
+      - "8086:80"
+    restart: always
