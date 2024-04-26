@@ -111,6 +111,7 @@ input[type=submit] {
 	font-size: medium;
 	box-shadow: .3em .3em 10px #888;
 	font-weight: bold;
+	padding: .5em 5em;
 }
 @media print {
 	input[type=submit] {
