@@ -22,7 +22,7 @@
 
 {%- for Block in Blocks %}
 {% set BlockIndex = loop.index0 %}
-<h3>{{ Data[BlockIndex]['Title'] }} &ndash; {{ Block|length }}</h3>
+<h3 id="{{ Data[BlockIndex]['TagName'] }}">{{ Data[BlockIndex]['Title'] }} &ndash; {{ Block|length }}</h3>
 
 {#- Questions -#}
 

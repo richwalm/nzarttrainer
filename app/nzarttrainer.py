@@ -10,6 +10,8 @@ import string
 import json
 import sys
 
+import re
+
 app = Flask(__name__, static_folder = 's')
 
 # Constants.
@@ -24,6 +26,9 @@ with app.open_resource('questions.json') as InputFile:
 Answers = []
 Required = Total = 0
 for Block in Data:
+    # Make a simple version of the title for an ID tag.
+    Block['TagName'] = re.sub(r'\W+', '', Block['Title']).lower()
+
     if Block['RequiredAnswers'] > len(Block['Questions']):
         sys.exit(1)
 
