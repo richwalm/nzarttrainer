@@ -21,10 +21,10 @@ Below are your full results.</p>
 {% set I = NS.Offset + Index -%}
 {% set A = request.form.get(I|string) %}
 <fieldset{% if A and A|int == Answers[I] %} class="c"{% elif A %} class="w"{% endif %}>
+<h4>{{ Question['Question'] }}</h4>
 {%- if 'Image' in Question %}
 <img src="{{ url_for('static', filename=Question['Image']) }}" alt="Figure">
 {%- endif -%}
-<h4>{{ Question['Question'] }}</h4>
 
 {#- Choices #}
 <ul>

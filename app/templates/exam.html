@@ -29,10 +29,10 @@
 {%- for Index in Block %}
 {% set Question = Data[BlockIndex]['Questions'][Index] %}
 <fieldset>
+<h4>{{ Question['Question'] }}</h4>
 {%- if 'Image' in Question %}
 <img src="{{ url_for('static', filename=Question['Image']) }}" alt="Figure">
 {%- endif -%}
-<h4>{{ Question['Question'] }}</h4>
 
 {#- Choices #}
 <ul>
